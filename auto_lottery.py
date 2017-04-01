@@ -3,6 +3,7 @@
 import os
 import sys
 import random
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
@@ -29,6 +30,8 @@ def print_log(message):
     """Print message to the log file."""
 
     lfile = open(LOGFILE, 'a')
+    lfile.write('{}\n'.format(message))
+    lfile.close()
 
 
 def enter_lottery():
@@ -37,6 +40,10 @@ def enter_lottery():
     # create selenium driver and point to lottery page
     driver = webdriver.Firefox()
     driver.get(LOTTERY_URL)
+
+    # get the performance for which we're entering
+    perf = driver.find_element_by_xpath('//h1[2]').text.split('\n')[0]
+    print_log(perf)
 
     # get the iframe source and load it
     fc = driver.find_element_by_id('frame-container')
@@ -87,4 +94,5 @@ def enter_lottery():
 
 if __name__ == '__main__':
 
+    print_log('*****{}'.format(datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')))
     enter_lottery()
