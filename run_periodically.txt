@@ -1,0 +1,12 @@
+to get the launchd working: 
+
+	1. copy com.bonnie.hamiltontix.plist to ~/Library/LaunchAgents
+	2. run this command
+		launchctl load com.bonnie.hamiltontix.plist
+	3. it shoud run the shell script immediately, and then at 11:15 every day thereafter
+	4. if it doesn't run, there's something wrong. troubleshooting cmds: 
+		launchctl list | grep bonnie
+		plutil -lint com.bonnie.hamiltontix.plist 
+	5. to discontinue:
+		launchctl unload com.bonnie.hamiltontix.plist
+
