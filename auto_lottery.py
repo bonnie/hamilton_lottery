@@ -2,13 +2,13 @@
 
 import os
 import sys
-import random
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
+PROJECT_HOME = os.environ.get('HAMILTON_LOTTERY_HOME', "~/src/hamilton/")
 
 # where to print logfile
-LOGFILE = "/Users/bonnie/src/hamilton/logfile"
+LOGFILE = os.path.join(PROJECT_HOME, "logfile")
 
 # where the magic happens
 LOTTERY_URL = "http://www.luckyseat.com/hamilton.html"
@@ -25,6 +25,7 @@ values_by_leadfield = {
     'emailaddress1': os.environ['EMAIL'],
     'address1_postalcode': os.environ['ZIP']
 }
+num_tickets =  os.environ.get('NUMTICKETS', 1), # optional
 
 def print_log(message):
     """Print message to the log file."""
@@ -66,8 +67,10 @@ def enter_lottery():
         sys.exit()
 
     # otherwise, click on a random radio button for 1 or 2 tickets
-    radio = random.choice(radios)
-    radio.click()
+    if num_tickets == 2:
+        radios[1].click()
+    else:
+        radios[0].click()
 
     # slide the lock thingy
     lock = driver.find_element_by_id('Slider')
