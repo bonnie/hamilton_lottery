@@ -2,3 +2,7 @@ logfile
 *.pyc
 secrets.sh
 .DS_Store
+.idea/
+phantomjs
+auto_lottery_lambda.zip
+auto_lottery_lambda/

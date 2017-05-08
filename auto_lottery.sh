@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd /Users/bonnie/src/hamilton
+cd $HAMILTON_LOTTERY_HOME
 source secrets.sh
-source /Users/bonnie/.virtualenvs/hammy/bin/activate 
-python auto_lottery.py
+source ~/.virtualenvs/hammy/bin/activate 
+python auto_lottery.py -d
 
