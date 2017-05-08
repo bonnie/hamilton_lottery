@@ -10,8 +10,8 @@ export LNAME="Smith"
 export EMAIL="example@example.com
 export ZIPCODE="12345"
 export AGE=25
-export NUMTICKETS=2
-export PHONE="5551234567"
+export NUMTICKETS=2 # optional
+export PHONE="5551234567" # optional
 export CHROME_DRIVER="/path/to/.virtualenvs/hammy/bin/chromedriver"
 ```
 
