@@ -12,3 +12,8 @@ License](http://www.gnu.org/licenses/).
 HamLott is meant to enter *one email address per day only*. Please do not use
 this to enter multiple email addresses at once -- that would be against both the
 spirit of the lottery and the spirit of this app. 
+
+## Success Rate
+
+The author entered the lottery once per day until SHM prevented this approach
+from working. During that time the author won the lottery exactly zero times.
