@@ -1,4 +1,5 @@
-# HamLott ### An automated Hamilton lottery app for San Francisco.  *UPDATE*: As
+# HamLott 
+### An automated Hamilton lottery app for San Francisco.  *UPDATE*: As
 of April 29, 2017 or so, SHM made the lottery entry pretty much robot-proof, and
 this app does not work with the current setup.
 
