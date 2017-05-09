@@ -1,6 +1,6 @@
 # HamLott 
 ### An automated Hamilton lottery app for San Francisco.  
-### *UPDATE*: As of April 30, 2017 or so, SHM made the lottery entry pretty much robot-proof, and this app does not work with the current setup.
+### *UPDATE*: As of April 30, 2017 or so, SHM made the lottery entry pretty much robot-proof, and this app does not work with the current site.
 
 ## License
 
@@ -15,5 +15,6 @@ spirit of the lottery and the spirit of this app.
 
 ## Success Rate
 
-The author entered the lottery once per day until SHM prevented this approach
-from working. During that time the author won the lottery exactly zero times.
+The author entered the lottery once per day from April 1, 2017 until SHM
+prevented this app from working. During that time the author won the lottery
+exactly zero times.
